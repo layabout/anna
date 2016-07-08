@@ -6,7 +6,7 @@ var EntryUtil = require('./entry-util');
 var precss = require('precss');
 var autoprefixer = require('autoprefixer');
 
-var html = process.env.NODE_ENV !== 'html';
+var html = process.env.NODE_ENV == 'static';
 
 //获取入口文件
 var entries = EntryUtil('modules/**/*.entry.js', 'modules/');
@@ -21,13 +21,12 @@ entries['lib'] = ['jquery',
 
 //build path
 var TARGET = html ? '../templates/assets' : '../../assets';
-var PUBLIC_PATH = html ? 'assets/' : '/assets/';
 
 var webpackConfig = {
     entry: entries,
     output: {
         path: path.join(__dirname, TARGET),
-        publicPath: PUBLIC_PATH,
+        publicPath: '/assets/',
         filename: 'js/[name].js',
         chunkFilename: 'js/[id].chunk.js'
     },

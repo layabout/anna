@@ -2,9 +2,8 @@
 .BreakingNewsController{overflow:hidden; background:transparent; height:auto; position:relative;}
 .BreakingNewsController .bn-title{display:inline-block; float:left; background:transparent; color:#FFF;}
 
-.BreakingNewsController ul{padding:0; margin:0; display:block; list-style:none; position:absolute; left: 0; text-align: left;}
+.BreakingNewsController ul{padding:0; margin:0; display:block; list-style:none;}
 .BreakingNewsController ul li{list-style:none; display:none;}
 .BreakingNewsController ul li a{text-decoration:none; color:#333; display:inline-block; overflow:hidden; padding: 0!important; line-height: 1.5!important;}
 
 .easing a, .easing span{transition:.25s linear; -moz-transition:.25s linear; -webkit-transition:.25s linear;}
-.easing {margin-top:5px;}

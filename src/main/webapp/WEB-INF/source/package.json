@@ -13,17 +13,15 @@
     "publish": "webpack -p --progress --colors --config webpack.config.prod.js",
     "postpublish": "npm run inject:assets",
 
-    "prebuild": "npm run clean:build",
-    "build": "webpack --progress --colors --display-error-details --config webpack.config.dev.js",
-    "postbuild": "npm run inject:assets",
+    "precompiler": "npm run clean:build",
+    "compiler": "webpack --progress --colors --display-error-details --config webpack.config.dev.js",
+    "postcompiler": "npm run inject:assets",
 
-    "prehtml:dev": "set NODE_ENV=html",
-    "html:dev": "npm run build",
-    "posthtml:dev": "webpack-dev-server --inline --hot --host 0.0.0.0 --progress --colors --config webpack.config.dev.js",
-    "html:dev2": "webpack-dev-server --inline --hot --host 0.0.0.0 --progress --colors --config webpack.config.dev.js",
+    "compiler:static": "set NODE_ENV=static && npm run compiler",
+    "compiler:dynamic": "set NODE_ENV=dynamic && npm run compiler",
 
-    "predev": "",
-    "dev": ""
+    "dev:static": "set NODE_ENV=html && webpack-dev-server --inline --hot --host 0.0.0.0 --progress --colors --config webpack.config.dev.js",
+    "dev:dynamic": "set NODE_ENV=dynamic && webpack --progress --colors --watch --display-error-details --config webpack.config.dev.js"
   },
   "author": "ruby",
   "license": "ISC",

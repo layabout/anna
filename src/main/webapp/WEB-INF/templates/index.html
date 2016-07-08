@@ -11,9 +11,9 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
     <script src="/assets/lib/browser-detection.js"></script>
     <!-- inject:css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/lib.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/lib.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
     <!-- endinject -->
 
     <!--[if lt IE 9]>
@@ -32,10 +32,10 @@
                     <div class="col-sm-4">
                         <div class="header-announcement">
                             <div class="BreakingNewsController easing" id="breakingnews">
-                                <div class="bn-title"><i class="fa fa-bell" aria-hidden="true"></i></div>
+                                <div class="bn-title"><i class="fa fa-bell hidden-xs hidden-ms hidden-sm" aria-hidden="true"></i></div>
                                 <ul>
-                                    <li><a href="#">这是第一条公告</a></li>
-                                    <li><a href="#">这是第二条公告</a></li>
+                                    <li><a href="#">这是第一条公告比较长比较长比较长比较长比较长</a></li>
+                                    <li><a href="#">这是第二条公告比较长</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -88,9 +88,9 @@
                     </div>
                     <div class="collapse navbar-collapse" id="header-nav-bar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#">首页</a></li>
-                            <li><a href="#">行业方案</a></li>
-                            <li><a href="#">支付产品</a></li>
+                            <li class="active"><a href="index.html" data-th-href="@{/}">首页</a></li>
+                            <li><a href="solution.html" data-th-href="@{/solution}">行业方案</a></li>
+                            <li><a href="products.html" data-th-href="@{/products}">支付产品</a></li>
                             <li><a href="#">商户服务</a></li>
                             <li><a href="#">安全中心</a></li>
                         </ul>
@@ -247,9 +247,9 @@
 </div>
 
 <!-- inject:js -->
-    <script type="text/javascript" src="assets/js/lib.js"></script>
-    <script type="text/javascript" src="assets/js/vendors.js"></script>
-    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script type="text/javascript" src="/assets/js/lib.js"></script>
+    <script type="text/javascript" src="/assets/js/vendors.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
     <!-- endinject -->
 </body>
 </html>

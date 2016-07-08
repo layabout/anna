@@ -11,7 +11,11 @@
     background: @header-top-bar-bg;
     color: @text-light;
     text-align: center;
-
+    .@{m-header}-announcement {
+      .easing {
+        margin-top:5px;
+      }
+    }
     a {
       color: @text-light;
       transition :.25s linear;
@@ -94,6 +98,12 @@
   .header {
 
     .header-top-bar {
+      .header-announcement {
+        .BreakingNewsController ul {
+          float: left;
+          margin-left: 10px;
+        }
+      }
       .menu-horizontal {
         > ul {
           text-align: right;
