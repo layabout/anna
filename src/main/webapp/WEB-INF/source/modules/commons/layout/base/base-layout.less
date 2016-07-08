@@ -1,0 +1,148 @@
+.content-wrapper {
+  width: 100%;
+  margin-top: 110px;
+  .top-banner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .tab-content {
+    p {
+      font-size: 14px;
+      line-height: 2;
+      color: #5c5c5c;
+    }
+    letter-spacing: 1px;
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      color: #222;
+      &.blue {
+        color: #2d5f7a;
+        line-height: 2;
+      }
+      &.small {
+        font-size: 16px;
+      }
+    }
+    .desc {
+      margin-top: 40px;
+      border-bottom: 1px solid #B4C4C4;
+      .tab-logo {
+        height: 184px;
+        width: 138px;
+      }
+
+    }
+    .feature {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .order-number {
+        width: 55px;
+        height: 50px;
+        margin: 0 auto;
+        display: inline-block;
+      }
+      .num1 {
+        background: url('./number.png') no-repeat 0 0;
+      }
+      .num2 {
+        background: url('./number.png') no-repeat 0 -70px;
+      }
+      .num3 {
+        background: url('./tu7.png') no-repeat 0 5px;
+      }
+
+      .num4 {
+        background: url('./tu7.png') no-repeat 0 -50px;
+      }
+
+      .num5 {
+        background: url('./tu7.png') no-repeat 0 -100px;
+      }
+
+      .num6 {
+        background: url('./tu7.png') no-repeat 0 -158px;
+      }
+
+      .num7 {
+        background: url('./tu7.png') no-repeat 0 -220px;
+      }
+    }
+  }
+
+  .bs-component {
+    .tab-wrapper {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #0B8AB6;
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+    }
+
+    .nav-tabs > li > a {
+      background: #fff;
+      border: none;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:hover,
+    .nav-tabs > li.active > a:focus {
+      border: none;
+      cursor: default;
+      color: #00bbee;
+    }
+  }
+}
+
+.introduce-slide {
+  .carousel-control.left {
+    background-image: none;
+  }
+  .carousel-control.right {
+    background-image: none;
+  }
+  .carousel-inner>.item>a>img,.carousel-inner>.item>img {
+    margin: 0 0 60px 150px;
+  }
+  .carousel-caption {
+    text-align: left;
+    position: absolute;
+    top: 80px;
+    left:50%;
+    text-shadow: none;
+  }
+  .carousel-control .icon-next,
+  .carousel-control .icon-prev {
+    color: #00bbee;
+  }
+  .carousel-indicators li {
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #d2d3d3;
+    border: 1px solid #d2d3d3;
+  }
+  .carousel-indicators .active {
+    margin: 0 5px;
+    background-color: #8bd9ef;
+    border: 1px solid #8bd9ef;
+  }
+}
+
+@media (min-width: 1280px) {
+  .content {
+    width: 1220px;
+  }
+}

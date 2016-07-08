@@ -1,0 +1,59 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:build": "rimraf ../templates/assets",
+    "clean:publish": "rimraf ../../assets/img/* rimraf ../../assets/css/* rimraf ../../assets/js/* ../../assets/fonts/*",
+    "inject:assets": "gulp inject:assets",
+    "imagemin": "gulp imagemin",
+
+    "prepublish": "npm run clean:publish & npm run clean:build",
+    "publish": "webpack -p --progress --colors --config webpack.config.prod.js",
+    "postpublish": "npm run inject:assets",
+
+    "prebuild": "npm run clean:build",
+    "build": "webpack --progress --colors --display-error-details --config webpack.config.dev.js",
+    "postbuild": "npm run inject:assets",
+
+    "prehtml:dev": "set NODE_ENV=html",
+    "html:dev": "npm run build",
+    "posthtml:dev": "webpack-dev-server --inline --hot --host 0.0.0.0 --progress --colors --config webpack.config.dev.js",
+    "html:dev2": "webpack-dev-server --inline --hot --host 0.0.0.0 --progress --colors --config webpack.config.dev.js",
+
+    "predev": "",
+    "dev": ""
+  },
+  "author": "ruby",
+  "license": "ISC",
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.4.0",
+    "autoprefixer": "^6.3.6",
+    "bootstrap": "^3.3.6",
+    "bootstrap-webpack": "0.0.5",
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "font-awesome": "^4.6.3",
+    "font-awesome-webpack": "0.0.4",
+    "glob": "^7.0.3",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-replace-task": "^0.11.0",
+    "gulp-tap": "^0.1.3",
+    "imports-loader": "^0.6.5",
+    "jquery": "^1.12.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

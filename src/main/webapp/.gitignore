@@ -1,0 +1,9 @@
+# Resources
+assets/css
+assets/js
+assets/img
+assets/fonts
+
+# Mac default
+*~
+.DS_Store

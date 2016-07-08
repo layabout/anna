@@ -1,0 +1,120 @@
+@import "../../../commons/variables";
+/*
+ * 页头
+ */
+
+/* header */
+@m-header: header;
+
+.@{m-header} {
+  .@{m-header}-top-wrapper {
+    background: @header-top-bar-bg;
+    color: @text-light;
+    text-align: center;
+
+    a {
+      color: @text-light;
+      transition :.25s linear;
+      line-height: 28px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    a:hover, a:focus {
+      color: @header-top-bar-link;
+    }
+    .@{m-header}-top-bar {
+      margin: 0 auto;
+    }
+  }
+
+  .@{m-header}-nav-wrapper {
+    background: rgba(255, 255, 255, .9);
+    background: #fff \9;
+    border-bottom: 1px solid #e7e7e7;
+    .@{m-header}-nav-bar {
+      margin: 0 auto;
+      .logo {
+        background: url("./logo.png");
+        width: 208px;
+        height: 45px;
+        display: block;
+        position: absolute;
+        top: 20px;
+      }
+      .navbar {
+        margin-bottom: 0px;
+        border: none;
+        font-size: 16px;
+        font-weight: normal;
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+
+      .navbar-inverse {
+        background: none;
+        .navbar-nav {
+          > li {
+            > a, > a:hover, > a:focus {
+              background: none;
+            }
+
+            > a {
+              color: #272727;
+              padding: 10px 25px;
+            }
+          }
+          > .active > a {
+            &,
+            &:hover,
+            &:focus {
+              color: @header-top-bar-link;
+            }
+          }
+        }
+        .navbar-collapse {
+          border-color: #ddd;
+        }
+        .navbar-toggle {
+          &:hover {
+            background-color: #f7e1b5;
+          }
+          .icon-bar {
+            background-color: #e99002;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+
+  .header {
+
+    .header-top-bar {
+      .menu-horizontal {
+        > ul {
+          text-align: right;
+        }
+      }
+    }
+
+    .header-nav-bar {
+      .navbar-right {
+        margin-right: 30px;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: 1280px) {
+
+  .header-top-bar, .header-nav-bar {
+    width: 1220px;
+  }
+
+}

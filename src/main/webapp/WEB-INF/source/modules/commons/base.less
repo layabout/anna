@@ -1,0 +1,31 @@
+@import "variables";
+
+body {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none!important;
+  color: @text-base;
+}
+
+a:focus { outline:0; }
+
+a:hover, a:focus {
+  color: @link-base!important;
+}
+
+ul {
+  -webkit-padding-start: 0;
+  padding-left: 0;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+}

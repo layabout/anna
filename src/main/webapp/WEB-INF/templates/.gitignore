@@ -1,0 +1,5 @@
+# Resources
+assets
+# Mac default
+*~
+.DS_Store

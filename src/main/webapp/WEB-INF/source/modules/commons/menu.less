@@ -1,0 +1,71 @@
+/*
+ * menu 模块
+ * 支持ul 横、竖向菜单，支持简单嵌套
+ */
+@m-menu: menu;
+.@{m-menu} {
+  > ul {
+    margin: 0;
+    > li {
+      list-style:none;
+      padding: 0 4px;
+      > a > span > i{
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+.@{m-menu}-horizontal {
+  > ul {
+    text-align: center;
+    > li {
+      display: inline;
+    }
+  }
+}
+
+.@{m-menu}-vertical {
+  > ul {
+    text-align: left;
+  }
+}
+
+.sub-menu-parent {
+  .sub-menu {
+    position: absolute;
+    top: 22px;
+    left: -10px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+  }
+  .sub-menu {
+    background: #fff;
+    > ul > li > a {
+      color: #2e2e2e;
+    }
+  }
+}
+
+.sub-menu-parent:hover {
+  position: relative;
+  .sub-menu {display: block;}
+}
+
+@media (min-width: 768px) {
+
+  .menu {
+    > ul > li > a {
+      > span {
+        display: inline;
+      }
+      > i {
+        display: none;
+      }
+    }
+  }
+
+}
