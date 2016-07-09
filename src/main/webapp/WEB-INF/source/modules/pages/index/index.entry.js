@@ -13,9 +13,6 @@ require("../components/footer/footer");
 
 
 
-
-
-
 // 幻灯片轮播速度
 $('.carousel').carousel({
     interval: 5000 //changes the speed

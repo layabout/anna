@@ -8,20 +8,15 @@
     "clean:publish": "rimraf ../../assets/img/* rimraf ../../assets/css/* rimraf ../../assets/js/* ../../assets/fonts/*",
     "inject:assets": "gulp inject:assets",
     "imagemin": "gulp imagemin",
-
     "prepublish": "npm run clean:publish & npm run clean:build",
     "publish": "webpack -p --progress --colors --config webpack.config.prod.js",
     "postpublish": "npm run inject:assets",
-
     "precompiler": "npm run clean:build",
     "compiler": "webpack --progress --colors --display-error-details --config webpack.config.dev.js",
     "postcompiler": "npm run inject:assets",
-
-    "compiler:static": "set NODE_ENV=static && npm run compiler",
-    "compiler:dynamic": "set NODE_ENV=dynamic && npm run compiler",
-
-    "dev:static": "set NODE_ENV=html && webpack-dev-server --inline --hot --host 0.0.0.0 --progress --colors --config webpack.config.dev.js",
-    "dev:dynamic": "set NODE_ENV=dynamic && webpack --progress --colors --watch --display-error-details --config webpack.config.dev.js"
+    "build": "set NODE_ENV=static && npm run compiler",
+    "server": "set NODE_ENV=static && webpack-dev-server --inline --hot --host 0.0.0.0 --progress --colors --config webpack.config.dev.js",
+    "watch": "set NODE_ENV=dynamic && webpack --progress --colors --watch --display-error-details --config webpack.config.dev.js"
   },
   "author": "ruby",
   "license": "ISC",
